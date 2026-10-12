@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111111;
+    color: white;
+    line-height: 1.6;
+}
+
+:root {
+    --primary: #d8ff00;
+    --dark: #111111;
+    --light-dark: #1d1d1d;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #111111;
+    padding: 20px 8%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.logo span,
+h2 span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: #111;
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    background:
+        linear-gradient(90deg, #111111 10%, #111111dd 45%, #11111155),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tagline {
+    color: var(--primary);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #dddddd;
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 480px;
+}
+
+/* Programs and Membership */
+.programs,
+.plans {
+    text-align: center;
+    padding: 80px 8%;
+}
+
+.programs h2,
+.plans > h2,
+.contact h2 {
+    font-size: 36px;
+}
+
+.section-text {
+    color: #bbbbbb;
+    margin: 12px 0 40px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card,
+.price-card {
+    background-color: var(--light-dark);
+    padding: 30px 25px;
+    border-radius: 10px;
+    flex: 1 1 240px;
+    max-width: 350px;
+    border: 1px solid #333333;
+    transition: 0.3s;
+}
+
+.card:hover,
+.price-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+}
+
+.card-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.card h3,
+.price-card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.card p,
+.price-card p {
+    color: #bbbbbb;
+    margin-bottom: 12px;
+}
+
+/* Pricing */
+.plans {
+    background-color: #171717;
+}
+
+.price-card h2 {
+    color: var(--primary);
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.price-card h2 span {
+    color: #bbbbbb;
+    font-size: 14px;
+}
+
+.price-card .btn {
+    margin-top: 15px;
+}
+
+.featured {
+    border: 2px solid var(--primary);
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+    padding: 80px 8%;
+    background-color: #111111;
+}
+
+.contact p {
+    color: #bbbbbb;
+    margin: 20px 0 30px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    background-color: #080808;
+}
+
+footer .logo {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaaaaa;
+}
+
+.copyright {
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        order: 3;
+    }
+
+    .hero {
+        padding: 70px 6%;
+        min-height: 500px;
+        background-position: center;
+    }
+
+    .programs,
+    .plans {
+        padding: 60px 5%;
+    }
+
+    .programs h2,
+    .plans > h2,
+    .contact h2 {
+        font-size: 28px;
+    }
+
+    .card-container {
+        align-items: center;
+    }
+
+    .card,
+    .price-card {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .navbar .btn {
+        padding: 9px 14px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        font-size: 14px;
+    }
+}
